@@ -69,15 +69,10 @@ resource "aws_s3_bucket_public_access_block" "state_block" {
 resource "aws_s3_bucket_object" "object" {
 
   bucket = "function-${var.environment}-${var.region}"
-
   key    = "${var.app-version}/${var.filename}"
-
   acl    = "private"  # or can be "public-read"
-
   source = var.filename
-
   etag = filemd5("${var.filename}")
-
   depends_on = [aws_s3_bucket.lambda]
 
 }

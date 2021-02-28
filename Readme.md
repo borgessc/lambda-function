@@ -45,10 +45,13 @@ Apply the terraform deployment and create the Bucket with Object Function includ
 
 ##  Deploy Lambda and API Gateway 
 
-Within the main folder the Lambda Function will be created and the api gateway to Provide external conectivity.
+Within the *main folder* the Lambda Function will be created and the api gateway to Provide external conectivity.
 Use the same method to deploy the Function
 
+Inicialize terraform
 `AWS_PROFILE=user-root-test terraform init`
+
+Deploy Lambda Function and API-GW
 `AWS_PROFILE=user-root-test terraform plan -var-file=ap-southeast-2.tfvars`
 `AWS_PROFILE=user-root-test terraform apply -var-file=ap-southeast-2.tfvars`
 
@@ -58,7 +61,9 @@ After deploy the Terraform manifest an output will be printed out to help you th
 
 # Manual Lambda validation
 
-During the test running the api gateway from URL return error 500, but running the aws lambda invoke works to validade handlers function via CLI 
+During the test running the api gateway from URL returns error 500, but running the aws lambda invoke works to validade handlers function via CLI.
+
+If for some reason the API-GW URL doesn't work it's possible to validate the Function running as show below.
 
 `AWS_PROFILE=user-root-test aws lambda invoke --region=ap-southeast-2 --function-name="ServerlessExample" output.txt`
 

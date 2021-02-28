@@ -27,21 +27,29 @@ aws_session_token =
 The `index.js` is the Lambda that will running within AWS.
 
 *Preparing the file for transfer*
-`zip index.js function.zip`
+```
+zip index.js function.zip
+```
 
 Deploying the Bucket
 
 The file don't need to be changed since is ready to deploy and execute.
 
 Inicialize terraform
-`cd s3/`
-`AWS_PROFILE=user-root-test terraform init`
+```
+cd s3/
+AWS_PROFILE=user-root-test terraform init
+```
 
 Plan the Bucket deployment and send the Object 
-`AWS_PROFILE=user-root-test terraform plan -var-file=ap-southeast-2.tfvars`
+```
+AWS_PROFILE=user-root-test terraform plan -var-file=ap-southeast-2.tfvars
+```
 
 Apply the terraform deployment and create the Bucket with Object Function included.
-`AWS_PROFILE=user-root-test terraform apply -var-file=ap-southeast-2.tfvars`
+```
+AWS_PROFILE=user-root-test terraform apply -var-file=ap-southeast-2.tfvars
+```
 
 ##  Deploy Lambda and API Gateway 
 
@@ -49,15 +57,20 @@ Within the *main folder* the Lambda Function will be created and the api gateway
 Use the same method to deploy the Function
 
 Inicialize terraform
-`AWS_PROFILE=user-root-test terraform init`
+```
+AWS_PROFILE=user-root-test terraform init
+```
 
 Deploy Lambda Function and API-GW
-`AWS_PROFILE=user-root-test terraform plan -var-file=ap-southeast-2.tfvars`
-`AWS_PROFILE=user-root-test terraform apply -var-file=ap-southeast-2.tfvars`
+```
+AWS_PROFILE=user-root-test terraform plan -var-file=ap-southeast-2.tfvars
+AWS_PROFILE=user-root-test terraform apply -var-file=ap-southeast-2.tfvars
+```
 
 After deploy the Terraform manifest an output will be printed out to help you the get the results through Web URL
-
-*e.g* `https://6kiwsh1upd.execute-api.ap-southeast-2.amazonaws.com/test`
+```
+*e.g* https://6kiwsh1upd.execute-api.ap-southeast-2.amazonaws.com/test
+```
 
 # Manual Lambda validation
 
@@ -65,7 +78,9 @@ During the test running the api gateway from URL returns error 500, but running 
 
 If for some reason the API-GW URL doesn't work it's possible to validate the Function running as show below.
 
-`AWS_PROFILE=user-root-test aws lambda invoke --region=ap-southeast-2 --function-name="ServerlessExample" output.txt`
+```
+AWS_PROFILE=user-root-test aws lambda invoke --region=ap-southeast-2 --function-name="ServerlessExample" output.txt
+```
 
 ```
 cat output.txt

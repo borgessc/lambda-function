@@ -1,0 +1,1 @@
+{"statusCode":200,"body":"{\n  \"message\": \"All good! Your function executed successfully.\",\n  \"input\": {}\n}"}

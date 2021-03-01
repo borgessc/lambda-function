@@ -1,6 +1,11 @@
-# Deploy Lambda Function 
+# Deploy AWS Lambda Function with Terraform <img src="https://user-images.githubusercontent.com/5950117/109472461-42eeed80-7ac6-11eb-96ba-d2e8a391b384.png" width="50" height="50"><img src="https://user-images.githubusercontent.com/5950117/109472646-7fbae480-7ac6-11eb-8ba9-271ff7b0baef.png" width="50" height="50">
+
 
 These terraform files will help to deploy and execute the Lambda Function within AWS Serveless resource.
+
+![image](https://user-images.githubusercontent.com/5950117/109472297-0cb16e00-7ac6-11eb-8389-1906df953cf3.png)
+
+
 
 # AWS Profile 
 
@@ -81,6 +86,10 @@ Deploy Lambda Function and API-GW
 AWS_PROFILE=user-root-test terraform plan -var-file=ap-southeast-2.tfvars
 AWS_PROFILE=user-root-test terraform apply -var-file=ap-southeast-2.tfvars
 ```
+<img src="https://user-images.githubusercontent.com/5950117/109471332-be4f9f80-7ac4-11eb-8687-20e5ec71627b.png" width="600" height="400">
+
+<img src="https://user-images.githubusercontent.com/5950117/109471511-f6ef7900-7ac4-11eb-8d2c-e067aee06e8b.png" width="500" height="300">
+
 **_Output example:_**
 ```
 Do you want to perform these actions?

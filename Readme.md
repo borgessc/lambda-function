@@ -22,6 +22,19 @@ aws_secret_access_key = U.........lz
 region = ap-southeast-2
 aws_session_token =
 ```
+## Installing Terraform
+
+Terraform will be the main tool used to deploy this solution, to install and execute follow the steps below.
+This recipe was written in terraform version 12, so download the latest version here
+* Find your system version here https://releases.hashicorp.com/terraform/0.12.30/
+* Download the binary https://releases.hashicorp.com/terraform/0.12.30/terraform_0.12.30_linux_amd64.zip
+* Extract the bynary directly to your path
+
+ e.g #`unzip terraform_0.12.30_linux_amd64.zip /usr/local/bin` 
+
+
+
+
 ## Deploying S3 bucket and Handler file
 
 The `index.js` is the Lambda file that will running within AWS.

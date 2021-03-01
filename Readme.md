@@ -1,7 +1,7 @@
 # Deploy AWS Lambda Function with Terraform <img src="https://user-images.githubusercontent.com/5950117/109472461-42eeed80-7ac6-11eb-96ba-d2e8a391b384.png" width="50" height="50"><img src="https://user-images.githubusercontent.com/5950117/109472646-7fbae480-7ac6-11eb-8ba9-271ff7b0baef.png" width="50" height="50">
 
 
-These terraform files will help to deploy and execute the Lambda Function within AWS Serveless resource.
+These terraform files will help to deploy and execute the Lambda Function within AWS Serverless resource.
 
 ![image](https://user-images.githubusercontent.com/5950117/109472297-0cb16e00-7ac6-11eb-8389-1906df953cf3.png)
 

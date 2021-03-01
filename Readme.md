@@ -69,7 +69,7 @@ AWS_PROFILE=user-root-test terraform plan -var-file=ap-southeast-2.tfvars
 AWS_PROFILE=user-root-test terraform apply -var-file=ap-southeast-2.tfvars
 ```
 
-After deploy the Terraform manifest an output will be printed out to help you the get the results through Web URL
+After deploy the Terraform recipe an output will be printed out to help you the get the results through Web URL
 ```
 *e.g* https://6kiwsh1upd.execute-api.ap-southeast-2.amazonaws.com/test
 ```

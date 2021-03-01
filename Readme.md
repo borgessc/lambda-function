@@ -28,7 +28,7 @@ Terraform will be the main tool used to deploy this solution, to install and exe
 This recipe was written in terraform version 12, so download the latest version here
 * Find your system version here https://releases.hashicorp.com/terraform/0.12.30/
 * Download the binary https://releases.hashicorp.com/terraform/0.12.30/terraform_0.12.30_linux_amd64.zip
-* Extract the bynary directly to your path
+* Extract the binary directly to your path
 
  e.g #`unzip terraform_0.12.30_linux_amd64.zip /usr/local/bin` 
 

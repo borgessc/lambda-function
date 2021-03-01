@@ -17,14 +17,16 @@ Create a profile into AWS credentials file
 ```
 [user-root-test]
 output=json
-aws_access_key_id = AKI...RWH6I
-aws_secret_access_key = U.......lSlz
+aws_access_key_id = A......6I
+aws_secret_access_key = U.........lz
 region = ap-southeast-2
 aws_session_token =
 ```
 ## Deploying S3 bucket and Handler file
 
-The `index.js` is the Lambda that will running within AWS.
+The `index.js` is the Lambda file that will running within AWS.
+
+Located within `S3` folder just execute the following command below.
 
 *Preparing the file for transfer*
 ```
@@ -74,7 +76,7 @@ After deploy the Terraform manifest an output will be printed out to help you th
 
 # Manual Lambda validation
 
-During the test running the api gateway from URL returns error 500, but running the aws lambda invoke works to validade handlers function via CLI.
+During the test running the api gateway from URL could returns some HTTP errors like (500), however aws has cli command `aws lambda invoke` that works to validade handlers function via CLI.
 
 If for some reason the API-GW URL doesn't work it's possible to validate the Function running as show below.
 

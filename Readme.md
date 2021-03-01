@@ -55,6 +55,8 @@ zip index.js function.zip
 
 The file don't need to be changed since is ready to deploy and execute.
 
+Remember to change the Bucket name within `variable.tf` file 
+
 **Inicialize terraform**
 ```
 cd s3/
@@ -82,6 +84,9 @@ AWS_PROFILE=user-root-test terraform init
 ```
 
 Deploy Lambda Function and API-GW
+
+Remember to set the same Bucket name within `variable.tf` file as defined on `S3` folder
+
 ```
 AWS_PROFILE=user-root-test terraform plan -var-file=ap-southeast-2.tfvars
 AWS_PROFILE=user-root-test terraform apply -var-file=ap-southeast-2.tfvars
@@ -148,6 +153,6 @@ cat output.txt
 
 ## Destroy the environment 
 
-If this function will be used to learn purposes **don't forget** to destroy the resources because AWS could charge you if keep it running.
+If this function will be used for learn purposes **don't forget** to destroy the resources because AWS could charge you if keep it running.
 
 

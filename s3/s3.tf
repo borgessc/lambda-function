@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "lambda" {
-  bucket              = "function-${var.environment}-${var.region}"
+  bucket              = "${var.bucket_name}-${var.environment}-${var.region}"
   acl                 = "private"
   acceleration_status = "Enabled"
   force_destroy       = false
@@ -68,7 +68,7 @@ resource "aws_s3_bucket_public_access_block" "state_block" {
 # Upload an object
 resource "aws_s3_bucket_object" "object" {
 
-  bucket = "function-${var.environment}-${var.region}"
+  bucket = "${var.bucket_name}-${var.environment}-${var.region}"
   key    = "${var.app-version}/${var.filename}"
   acl    = "private"  # or can be "public-read"
   source = var.filename

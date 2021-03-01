@@ -2,8 +2,8 @@ resource "aws_lambda_function" "example" {
    function_name = "ServerlessExample"
 
    # The bucket name as created earlier with "aws s3api create-bucket"
-   s3_bucket = "function-${var.environment}-${var.region}"
-   s3_key    = "v1.0.0/function.zip"
+   s3_bucket = "${var.bucket_name}-${var.environment}-${var.region}"
+   s3_key    = "${var.app-version}/${var.filename}"
 
    # "main" is the filename within the zip file (main.js) and "handler"
    # is the name of the property under which the handler function was

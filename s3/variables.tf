@@ -15,6 +15,12 @@ variable "enable_mfa_delete" {
 
 }
 
+variable "bucket_name" {
+  description = "The name of the Bucket in AWS S3"
+  type = string
+  default = "function"
+}
+
 variable "allowed_accounts_read_access" {
   type    = list(string)
   default = []

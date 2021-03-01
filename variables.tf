@@ -22,4 +22,20 @@ variable "allowed_accounts_read_access" {
 
 }
 
+variable "bucket_name" {
+  description = "The name of the Bucket in AWS S3"
+  type = string
+  default = "function"
+}
 
+variable "filename" {
+  default = "function.zip"
+  description = "Lambda zip file name"
+  
+}
+
+variable "app-version" {
+  description = "Version of new Lambda Function"
+  default = "v1.0.0"
+
+}
